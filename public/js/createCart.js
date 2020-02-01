@@ -1,8 +1,10 @@
 import getCart from "./API/getCart.js";
 import findID from "./API/deleteItem.js";
+import checkout from "./API/checkout.js"
 
 // Display cart
-async function createCart() {
+const createCart = async () => {
+  document.getElementById("checkout-btn").addEventListener("click", checkout);
   let response = await getCart();
   let cartArray = await response;
 
@@ -43,5 +45,6 @@ document.addEventListener("click", function(e) {
     findID(e);
   }
 });
+
 
 export default createCart;

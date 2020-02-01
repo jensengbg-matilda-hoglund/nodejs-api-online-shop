@@ -1,5 +1,5 @@
 // add to CART
-async function addItem(id) {
+const addItem = async id => {
   const url = "http://localhost:3000/api/cart";
   fetch(url + "?id=" + id, {
     method: "POST"

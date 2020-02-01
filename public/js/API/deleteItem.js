@@ -1,4 +1,4 @@
-async function deleteItem(id) {
+const deleteItem = async id => {
   const url = "http://localhost:3000/api/cart";
   fetch(url + "?id=" + id, {
     method: "DELETE"
@@ -7,7 +7,7 @@ async function deleteItem(id) {
 }
 
 // find ID to delete
-const findID = e => {
+const findID = (e) => {
   const target = e.target;
   const id = target.id;
   deleteItem(id);

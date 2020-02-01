@@ -2,8 +2,8 @@ import getCart from "./API/getCart.js";
 import getProducts from "./API/getProducts.js";
 import findID from "./API/addToCart.js";
 
-// Products in cart displayed on button
-async function changeProduct(productsArray) {
+// Products in cart displayed on product page
+const changeProduct = async productsArray => {
   let cartArray = await getCart();
   cartArray = await cartArray;
 
@@ -19,7 +19,7 @@ async function changeProduct(productsArray) {
 }
 
 // Display products
-async function createProduct() {
+const createProduct = async () => {
   let productsArray = await getProducts();
   productsArray = await productsArray;
 
@@ -27,21 +27,25 @@ async function createProduct() {
 
   for (let i = 0; i < productsArray.length; i++) {
     const article = document.createElement("article");
-    const productName = document.createElement("h3");
+    const productImage = document.createElement("img");
     const divider = document.createElement("span");
+    const productName = document.createElement("h3");
     const newDiv = document.createElement("div");
     const price = document.createElement("p");
     const buyBtn = document.createElement("button");
 
     article.className = "shop-item";
+    productImage.className = "product-image";
+    productImage.src = productsArray[i].imgurl;
     divider.className = "divider";
     price.className = "price";
     buyBtn.className = "add";
     buyBtn.id = productsArray[i].id;
 
     productsSection.appendChild(article);
-    article.appendChild(productName);
+    article.appendChild(productImage);
     article.appendChild(divider);
+    article.appendChild(productName);
     article.appendChild(newDiv);
     newDiv.appendChild(price);
     newDiv.appendChild(buyBtn);

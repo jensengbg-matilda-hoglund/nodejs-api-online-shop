@@ -1,4 +1,4 @@
-async function getProducts() {
+const getProducts = async () => {
   const url = "http://localhost:3000/api/products";
   let response = await fetch(url, {
     method: "GET"

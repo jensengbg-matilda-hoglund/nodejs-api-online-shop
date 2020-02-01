@@ -23,7 +23,7 @@ const newProduct = async (name, price, imgurl) => {
 app.post("/api/products", async (req, res) => {
   let message = {
     success: true,
-    message: "New product added"
+    message: "New product added",
   };
 
   const { name, price, imgurl } = req.query;
@@ -77,17 +77,17 @@ app.post("/api/cart", async (req, res) => {
   if (typeof data == "string" || data instanceof String) {
     message = {
       success: false,
-      message: "Product not found"
+      message: "Product not found",
     };
   } else if (data === false) {
     message = {
       success: false,
-      message: "Product already in cart"
+      message: "Product already in cart",
     };
   } else {
     message = {
       success: true,
-      message: "Product added to cart"
+      message: "Product added to cart",
     };
   }
 
@@ -117,17 +117,29 @@ app.delete("/api/cart", async (req, res) => {
   if (typeof data == "string" || data instanceof String) {
     message = {
       success: false,
-      message: "Product not in cart"
+      message: "Product not in cart",
     };
   } else {
     message = {
       success: true,
-      message: "Product removed from cart"
+      message: "Product removed from cart",
     };
   }
 
   message.data = data[data.length - 1];
   return res.send(message);
+});
+
+
+// CLEAR CART
+app.delete("/api/clear-cart", async (req, res) => {
+  console.log("here");
+  let {cart} = req.query
+  const data = await database
+    .get("cart")
+    .remove(cart)
+    .write();
+  res.send(data);
 });
 
 // GET CART

@@ -147,6 +147,12 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
+.product-image {
+  width: 8em;
+  display: flex;
+  align-self: center;
+}
+
 h3 {
   font-size: 3em;
   color: #00ffff;
@@ -277,4 +283,25 @@ h3 {
   text-shadow: -1px 2px 30px rgba(237, 0, 158, 1);
   font-weight: 900;
   font-family: "Major Mono Display", monospace;
+}
+
+.checkout {
+  grid-column: 5/6;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+#checkout-btn {
+  font-size: 1.5em;
+  color: #00ffff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-shadow: -1px 2px 30px rgba(69, 255, 251, 1);
+  border: 2px solid #00ffff;
+  padding: 6px 10px;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }

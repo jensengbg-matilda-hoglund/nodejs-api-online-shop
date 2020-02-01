@@ -4,57 +4,56 @@
       "id": "33f282b8-50ed-4a55-a858-cfd9a5e7304e",
       "name": "Banana",
       "price": "1.20",
-      "imgurl": "../img/banana.svg"
+      "imgurl": "../img/banana.png"
     },
     {
       "id": "b5655160-7b97-4967-8daf-15d7622e7178",
       "name": "Coffee",
       "price": "1.40",
-      "imgurl": "../img/coffee.svg"
+      "imgurl": "../img/coffee.png"
     },
     {
       "id": "90df866d-51a4-43f2-b610-2b3f62176e44",
-      "name": "Pineapple",
+      "name": "Fruit Salad",
       "price": "0.80",
-      "imgurl": "../img/pineapple.svg"
+      "imgurl": "../img/fruit-salad.png"
     },
     {
       "id": "f6d3e2a9-31e8-45e3-8a17-d6f61a0bbf2b",
-      "name": "Milk",
+      "name": "Smoothie",
       "price": "1.10",
-      "imgurl": "../img/milk.svg"
+      "imgurl": "../img/Smoothie.png"
     },
     {
       "id": "21b73091-f038-4451-8762-9ff93d131fd3",
       "name": "Good Mood",
       "price": "2.50",
-      "imgurl": "../img/mood.svg"
+      "imgurl": "../img/mood.png"
     },
     {
       "id": "a22394b6-1151-4354-b132-2e8f40e7dd11",
       "name": "Sandwich",
       "price": "3.20",
-      "imgurl": "../img/sandwich.svg"
+      "imgurl": "../img/sandwich.png"
     },
     {
       "id": "e9f6c50e-2cd1-4a97-8f19-2f54550c855c",
       "name": "Cinnamon Bun",
       "price": "1.40",
-      "imgurl": "../img/cinnamon.svg"
-    }
-  ],
-  "cart": [
-    {
-      "id": "f6d3e2a9-31e8-45e3-8a17-d6f61a0bbf2b",
-      "name": "Milk",
-      "price": "1.10",
-      "imgurl": "../img/milk.svg"
+      "imgurl": "../img/cinnamon-bun.png"
     },
     {
-      "id": "a22394b6-1151-4354-b132-2e8f40e7dd11",
-      "name": "Sandwich",
-      "price": "3.20",
-      "imgurl": "../img/sandwich.svg"
+      "id": "292c6235-6060-4ea2-bd96-0fc9365a2744",
+      "name": "Pancakes",
+      "price": "4.20",
+      "imgurl": "../img/pancakes.png"
+    },
+    {
+      "id": "d8a747b3-cc53-4e3c-b01f-5b189c86e721",
+      "name": "Tips",
+      "price": "0.25",
+      "imgurl": "../img/tips.png"
     }
-  ]
+  ],
+  "cart": []
 }
