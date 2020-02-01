@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-the-one-where-we-build-an-api-assignment-1",
+  "version": "1.0.0",
+  "description": "I denna inlämningsuppgift ska du bygga en Node.JS-applikation för en e-handelssida. Du ska skapa upp ett API samt en databas med lowdb som ska hantera din e-handelssida. Denna inlämningsuppgift ska **dock inte** ha någon HTML, CSS eller JavaScript (i klienten). Utan det kommer i nästa inlämningsuppgift där du ska använda dig av ditt API från denna uppgift.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jensengbg-matilda-hoglund/nodejs-the-one-where-we-build-an-API-assignment-1.git"
+  },
+  "keywords": [],
+  "author": "Matilda Höglund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jensengbg-matilda-hoglund/nodejs-the-one-where-we-build-an-API-assignment-1/issues"
+  },
+  "homepage": "https://github.com/jensengbg-matilda-hoglund/nodejs-the-one-where-we-build-an-API-assignment-1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "uuid": "^3.4.0"
+  }
+}

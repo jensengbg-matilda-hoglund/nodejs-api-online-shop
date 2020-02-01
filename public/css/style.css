@@ -111,7 +111,7 @@ main {
   text-shadow: -1px 2px 30px rgba(69, 255, 251, 1);
 }
 
-.canvas {
+.products {
   grid-column: 3/7;
   display: flex;
   flex-wrap: wrap;
@@ -134,6 +134,7 @@ main {
   -webkit-background-clip: text;
 }
 
+/* PRODUCTS */
 .shop-item {
   display: flex;
   flex-direction: column;
@@ -146,13 +147,6 @@ main {
   transition: all 0.2s ease-in-out;
 }
 
-h4 {
-  color: #00ffff;
-  font-family: "Major Mono Display", monospace;
-  letter-spacing: 15px;
-  line-height: 2em;
-}
-
 h3 {
   font-size: 3em;
   color: #00ffff;
@@ -161,23 +155,31 @@ h3 {
   text-shadow: -1px 2px 30px rgba(69, 255, 251, 1);
 }
 
-.price {
-  font-size: 1.3em;
-  color: #ed009e;
-  text-shadow: -1px 2px 30px rgba(237, 0, 158, 1);
-  font-weight: 900;
-  font-family: "Major Mono Display", monospace;
-}
-
 .divider {
   border-bottom: solid 3px #ed009e;
   padding: 1em 0 1em 0;
 }
 
-.add {
+.shop-item div {
   display: flex;
-  align-self: flex-end;
-  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+}
+
+.price {
+  display: flex;
+  font-size: 1.3em;
+  color: #ed009e;
+  text-shadow: -1px 2px 30px rgba(237, 0, 158, 1);
+  font-weight: 900;
+  font-family: "Major Mono Display", monospace;
+  margin-top: 1em;
+  width: 6em;
+}
+
+.add {
+  padding: 4px 16px;
   border: double 4px #00ffff;
   background: none;
   color: #00ffff;
@@ -185,23 +187,23 @@ h3 {
   font-family: "Major Mono Display", monospace;
   margin-top: 2em;
   cursor: pointer;
+  height: 50px;
 }
 
-/* CART    */
+/* CART   */
 .cart {
   display: flex;
   flex-direction: column;
   margin-right: 15em;
   background-color: rgba(0, 0, 0, 0.267);
-  width: 40em;
+  width: 45em;
   padding: 1em;
 }
 .cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 35em;
-  margin: 2em;
+  display: grid;
+  grid-template-columns: 30em 8em 5em;
+  grid-template-areas: "product-name cart-price delete";
+  margin: 2em 0 3em 1em;
   font-size: 1em;
 }
 
@@ -211,22 +213,68 @@ h3 {
   flex-direction: column;
 }
 
+.product-name {
+  grid-area: product-name;
+  color: #00ffff;
+  font-size: 1.3em;
+  font-family: "Major Mono Display", monospace;
+  letter-spacing: 15px;
+  line-height: 2em;
+}
+
+.cart-price {
+  grid-area: cart-price;
+  font-size: 1.3em;
+  color: #ed009e;
+  text-shadow: -1px 2px 30px rgba(237, 0, 158, 1);
+  font-weight: 900;
+  font-family: "Major Mono Display", monospace;
+  display: flex;
+  align-self: center;
+}
+
+.delete {
+  grid-area: delete;
+  font-size: 1.5em;
+  color: #00ffff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-shadow: -1px 2px 30px rgba(69, 255, 251, 1);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  transform: scale(1.4, 1.4);
+  transition: all 0.2s ease-in-out;
+}
+
 .cart-divider {
   border-top: solid 3px #ed009e;
   width: 20em;
   display: flex;
   align-self: flex-end;
-  margin: 0 1em 0 0;
+  margin: 1em;
 }
 
-.total-cart {
-    display: flex;
-    justify-content: space-between;
-    padding: 2em;
+.sum-cart {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
 }
 
-#total {
-    font-size: 1.5em;
-    color: #00ffff;
-    font-family: "Major Mono Display", monospace;
+.total {
+  font-size: 1.5em;
+  color: #00ffff;
+  font-family: "Major Mono Display", monospace;
+}
+
+#total-price {
+  margin-left: 4em;
+  font-size: 1.3em;
+  color: #ed009e;
+  text-shadow: -1px 2px 30px rgba(237, 0, 158, 1);
+  font-weight: 900;
+  font-family: "Major Mono Display", monospace;
 }

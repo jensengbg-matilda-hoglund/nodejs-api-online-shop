@@ -17,13 +17,13 @@
     <title>Futuristic Shop</title>
   </head>
 
-  <body class="cart-page">
+  <body>
     <section class="wrapper">
       <nav class="header">
         <section class="container">
           <ul class="menu">
             <li><a href="../index.html" class="active">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
@@ -42,16 +42,12 @@
             Buy your morning coffee here and save the planet
           </h2>
         </section>
-        <section class="products cart">
-          <section id="cartID"></section>
-          <span class="cart-divider"></span>
-          <div class="sum-cart">
-            <p class="total">Total:</p>
-            <p id="total-price"></p>
-          </div>
+
+        <section class="products" id="product-section">
+          <button class="add" id="getAll">GET PRODUCTS</button>
         </section>
       </main>
     </section>
-    <script type="module" src="../js/index.js"></script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
