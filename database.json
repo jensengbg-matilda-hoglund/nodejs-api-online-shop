@@ -55,5 +55,18 @@
       "imgurl": "../img/tips.png"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "d8a747b3-cc53-4e3c-b01f-5b189c86e721",
+      "name": "Tips",
+      "price": "0.25",
+      "imgurl": "../img/tips.png"
+    },
+    {
+      "id": "e9f6c50e-2cd1-4a97-8f19-2f54550c855c",
+      "name": "Cinnamon Bun",
+      "price": "1.40",
+      "imgurl": "../img/cinnamon-bun.png"
+    }
+  ]
 }
