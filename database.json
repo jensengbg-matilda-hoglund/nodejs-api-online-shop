@@ -55,12 +55,5 @@
       "imgurl": "../img/tips.png"
     }
   ],
-  "cart": [
-    {
-      "id": "b5655160-7b97-4967-8daf-15d7622e7178",
-      "name": "Coffee",
-      "price": "1.40",
-      "imgurl": "../img/coffee.png"
-    }
-  ]
+  "cart": []
 }

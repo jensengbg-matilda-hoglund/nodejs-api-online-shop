@@ -10,7 +10,7 @@ font-family: 'Monoton', cursive;
 font-family: 'Oswald', sans-serif;
 */
 html {
-  background-image: url(../img/background_neon.jpg);
+  background-image: url(../img/background.png);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

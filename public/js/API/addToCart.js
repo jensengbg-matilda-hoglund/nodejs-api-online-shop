@@ -7,6 +7,8 @@ const addItem = async id => {
   const button = document.getElementById(id);
   button.className = "in-cart";
   button.innerHTML = "in cart";
+
+
 };
 
 // find ID to add
