@@ -1,10 +1,10 @@
+const express = require("express");
 const lowdb = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const uuidv4 = require("uuid/v4");
-const app = require("./server");
-const express = require("express");
-
 const adapter = new FileSync("database.json");
+
+const app = express();
 const database = lowdb(adapter);
 
 app.use(express.static("public"));
@@ -23,7 +23,7 @@ const newProduct = async (name, price, imgurl) => {
 app.post("/api/products", async (req, res) => {
   let message = {
     success: true,
-    message: "New product added",
+    message: "New product added"
   };
 
   const { name, price, imgurl } = req.query;
@@ -35,6 +35,12 @@ app.post("/api/products", async (req, res) => {
 // GET ALL PRODUCTS
 app.get("/api/products", (req, res) => {
   res.json(database.get("products").value());
+  return res;
+});
+
+// GET CART
+app.get("/api/cart", (req, res) => {
+  res.json(database.get("cart").value());
   return res;
 });
 
@@ -77,17 +83,17 @@ app.post("/api/cart", async (req, res) => {
   if (typeof data == "string" || data instanceof String) {
     message = {
       success: false,
-      message: "Product not found",
+      message: "Product not found"
     };
   } else if (data === false) {
     message = {
       success: false,
-      message: "Product already in cart",
+      message: "Product already in cart"
     };
   } else {
     message = {
       success: true,
-      message: "Product added to cart",
+      message: "Product added to cart"
     };
   }
 
@@ -117,12 +123,12 @@ app.delete("/api/cart", async (req, res) => {
   if (typeof data == "string" || data instanceof String) {
     message = {
       success: false,
-      message: "Product not in cart",
+      message: "Product not in cart"
     };
   } else {
     message = {
       success: true,
-      message: "Product removed from cart",
+      message: "Product removed from cart"
     };
   }
 
@@ -130,11 +136,10 @@ app.delete("/api/cart", async (req, res) => {
   return res.send(message);
 });
 
-
 // CLEAR CART
 app.delete("/api/clear-cart", async (req, res) => {
   console.log("here");
-  let {cart} = req.query
+  let { cart } = req.query;
   const data = await database
     .get("cart")
     .remove(cart)
@@ -142,8 +147,4 @@ app.delete("/api/clear-cart", async (req, res) => {
   res.send(data);
 });
 
-// GET CART
-app.get("/api/cart", (req, res) => {
-  res.json(database.get("cart").value());
-  return res;
-});
+module.exports = app;
