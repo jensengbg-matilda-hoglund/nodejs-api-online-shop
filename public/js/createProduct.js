@@ -14,9 +14,10 @@ const changeProduct = async productsArray => {
       const ID = test.id;
       const button = document.getElementById(ID);
       button.innerHTML = "in cart";
+      button.className = "in-cart";
     }
   }
-}
+};
 
 // Display products
 const createProduct = async () => {
@@ -55,13 +56,14 @@ const createProduct = async () => {
     buyBtn.innerHTML = "buy";
   }
   changeProduct(productsArray);
-}
+};
 
-// BUY BUTTON
-document.addEventListener("click", function(e) {
+// BUY BUTTON (only available products)
+const addButton = e => {
   if (e.target.className == "add") {
     findID(e);
   }
-});
+};
+document.addEventListener("click", addButton);
 
 export default createProduct;

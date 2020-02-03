@@ -1,10 +1,9 @@
 import getCart from "./API/getCart.js";
 import findID from "./API/deleteItem.js";
-import checkout from "./API/checkout.js"
+import checkout from "./API/checkout.js";
 
 // Display cart
 const createCart = async () => {
-  document.getElementById("checkout-btn").addEventListener("click", checkout);
   let response = await getCart();
   let cartArray = await response;
 
@@ -37,7 +36,10 @@ const createCart = async () => {
   total = total.toFixed(2);
   total = "$ " + total.toString();
   displayTotal.innerHTML = total;
-}
+
+  //add checkout btn
+  document.getElementById("checkout-btn").addEventListener("click", checkout);
+};
 
 // DELETE BUTTON
 document.addEventListener("click", function(e) {
@@ -45,6 +47,5 @@ document.addEventListener("click", function(e) {
     findID(e);
   }
 });
-
 
 export default createCart;

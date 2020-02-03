@@ -1,7 +1,7 @@
-import createCart from "./createCart.js";
 import createProduct from "./createProduct.js";
+import createCart from "./createCart.js";
 
-//Handle different page
+//Handle different pages
 const startPage = () => {
   if (document.body.className == "product-page") {
     createProduct();
