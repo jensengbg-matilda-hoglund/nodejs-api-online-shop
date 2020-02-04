@@ -5,7 +5,6 @@ import findID from "./API/addToCart.js";
 // Products in cart displayed on product page
 const changeProduct = async productsArray => {
   let cartArray = await getCart();
-  cartArray = await cartArray;
 
   for (let i = 0; i < productsArray.length; i++) {
     let test = cartArray.find(data => data.id === productsArray[i].id);
@@ -22,7 +21,6 @@ const changeProduct = async productsArray => {
 // Display products
 const createProduct = async () => {
   let productsArray = await getProducts();
-  productsArray = await productsArray;
 
   const productsSection = document.getElementById("product-section");
 

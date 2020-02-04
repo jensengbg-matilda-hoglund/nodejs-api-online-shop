@@ -5,8 +5,8 @@ const deleteItem = async id => {
   const data = await fetch(url + "?id=" + id, {
     method: "DELETE"
   });
-  const response = await data;
-  if (response) {
+ 
+  if (data) {
     updateTotal(id);
   }
   document.getElementById(id).parentElement.remove();

@@ -4,8 +4,7 @@ const getCart = async () => {
     method: "GET"
   });
   const data = await response.json();
-  const cart = await data;
-  return cart;
+  return data
 }
 
 export default getCart;

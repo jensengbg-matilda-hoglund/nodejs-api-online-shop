@@ -4,8 +4,7 @@ import checkout from "./API/checkout.js";
 
 // Display cart
 const createCart = async () => {
-  let response = await getCart();
-  let cartArray = await response;
+  let cartArray = await getCart();
 
   const cartSection = document.getElementById("cartID");
   const displayTotal = document.getElementById("total-price");
