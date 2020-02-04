@@ -184,8 +184,7 @@ h3 {
   width: 6em;
 }
 
-.add,
-.in-cart {
+.add {
   padding: 4px 16px;
   border: double 4px #00ffff;
   background: none;
@@ -195,10 +194,6 @@ h3 {
   margin-top: 2em;
   cursor: pointer;
   height: 50px;
-}
-
-.in-cart {
-  cursor: not-allowed;
 }
 
 /* CART   */
