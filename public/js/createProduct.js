@@ -14,7 +14,7 @@ const changeProduct = async productsArray => {
       const ID = test.id;
       const button = document.getElementById(ID);
       button.innerHTML = "in cart";
-      button.className = "in-cart";
+      button.disable = true;
     }
   }
 };
@@ -58,7 +58,7 @@ const createProduct = async () => {
   changeProduct(productsArray);
 };
 
-// BUY BUTTON (only available products)
+// BUY BUTTON
 const addButton = e => {
   if (e.target.className == "add") {
     findID(e);

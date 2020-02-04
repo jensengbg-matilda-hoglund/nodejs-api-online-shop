@@ -5,8 +5,8 @@ const addItem = async id => {
     method: "POST"
   });
   const button = document.getElementById(id);
-  button.className = "in-cart";
   button.innerHTML = "in cart";
+  button.disable = true;
 
 
 };

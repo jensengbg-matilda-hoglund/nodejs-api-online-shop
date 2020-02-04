@@ -22,7 +22,7 @@
       "id": "f6d3e2a9-31e8-45e3-8a17-d6f61a0bbf2b",
       "name": "Smoothie",
       "price": "1.10",
-      "imgurl": "../img/Smoothie.png"
+      "imgurl": "../img/smoothie.png"
     },
     {
       "id": "21b73091-f038-4451-8762-9ff93d131fd3",
@@ -55,5 +55,12 @@
       "imgurl": "../img/tips.png"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "33f282b8-50ed-4a55-a858-cfd9a5e7304e",
+      "name": "Banana",
+      "price": "1.20",
+      "imgurl": "../img/banana.png"
+    }
+  ]
 }
