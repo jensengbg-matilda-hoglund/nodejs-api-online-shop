@@ -1,10 +1,14 @@
-/* import getCart from "./API/getCart.js";
-
 const updateTotal = (id) => {
-let cartArray = await getCart();
-cartArray = await cartArray;
+    const displayTotal = document.getElementById("total-price");
+    const parent = document.getElementById(id).parentNode;
+    const child = parent.childNodes[1].innerText;
+    let total = displayTotal.innerText;
+    total = parseFloat(total.substr(2, 4));
+    total = total - parseFloat(child);
+    total = total.toFixed(2);
+    total = total.toString();
+    total = "$ " + total;
+    displayTotal.innerHTML = total;
+}
 
-const item = cartArray.find(data => data.id);
-const price = item.price
-console.log(price)
-} */
+export default updateTotal;

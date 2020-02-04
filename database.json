@@ -55,12 +55,5 @@
       "imgurl": "../img/tips.png"
     }
   ],
-  "cart": [
-    {
-      "id": "33f282b8-50ed-4a55-a858-cfd9a5e7304e",
-      "name": "Banana",
-      "price": "1.20",
-      "imgurl": "../img/banana.png"
-    }
-  ]
+  "cart": []
 }
