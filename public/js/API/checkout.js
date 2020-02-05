@@ -5,6 +5,6 @@ const checkout = async () => {
     method: "DELETE"
   });
   location.reload();
-}
+};
 
 export default checkout;

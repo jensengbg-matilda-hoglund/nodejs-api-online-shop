@@ -7,14 +7,11 @@ const addItem = async id => {
   const button = document.getElementById(id);
   button.innerHTML = "in cart";
   button.disable = true;
-
-
 };
 
 // find ID to add
 const findID = e => {
-  const target = e.target;
-  const id = target.id;
+  const id = e.target.id;
   addItem(id);
 };
 
