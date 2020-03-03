@@ -5,7 +5,7 @@
 - En produktlistningssida som visar alla produkter från databasen.
 - Sida för att se sin varukorg och de produkter man lagt till där.
 
-#Produktlistningsidan
+# Produktlistningsidan
 - Varje produkt ska visa namn, pris och en bild.
 - Det ska även på varje produkt finns en knapp "Lägg till i varukorg", klickar användaren på den så ska produkten läggas till i varukorgen.
 - Det ska inte kunna gå att lägga till samma produkt igen.
