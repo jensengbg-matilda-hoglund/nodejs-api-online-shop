@@ -1,24 +1,16 @@
+const {
+  getProducts,
+  getCart,
+  newProduct,
+  add,
+  remove,
+  clearCart
+} = require("./database-op");
 const express = require("express");
-const lowdb = require("lowdb");
-const FileSync = require("lowdb/adapters/FileSync");
-const uuidv4 = require("uuid/v4");
-const adapter = new FileSync("database.json");
 
 const app = express();
-const database = lowdb(adapter);
 
 app.use(express.static("public"));
-
-// ADD NEW PRODUCT
-const newProduct = async (name, price, imgurl) => {
-  let id = uuidv4();
-  const response = await database
-    .get("products")
-    .push({ id, name, price, imgurl })
-    .write();
-
-  return response;
-};
 
 app.post("/api/products", async (req, res) => {
   let message = {
@@ -33,48 +25,17 @@ app.post("/api/products", async (req, res) => {
 });
 
 // GET ALL PRODUCTS
-app.get("/api/products", (req, res) => {
-  res.json(database.get("products").value());
+app.get("/api/products", async (req, res) => {
+  res.json(getProducts());
+
   return res;
 });
 
 // GET CART
 app.get("/api/cart", (req, res) => {
-  res.json(database.get("cart").value());
+  res.json(getCart());
   return res;
 });
-
-// ADD TO CART
-const add = async id => {
-  // If no product found, send back empty string
-  let response = "";
-  let data = await database
-    .get("cart")
-    .find({ id })
-    .value();
-  console.log(data);
-
-  if (!data) {
-    data = await database
-      .get("products")
-      .find({ id })
-      .value();
-
-    if (data) {
-      data = await database
-        .get("cart")
-        .push(data)
-        .write();
-      return data;
-    } else {
-      return response;
-    }
-  } else {
-    response = false;
-  }
-  console.log(response);
-  return response;
-};
 
 app.post("/api/cart", async (req, res) => {
   const { id } = req.query;
@@ -101,21 +62,6 @@ app.post("/api/cart", async (req, res) => {
   return res.send(message);
 });
 
-// DELETE FROM CART
-const remove = async id => {
-  let response = "";
-  const data = await database
-    .get("cart")
-    .remove({ id })
-    .write();
-
-  if (data.length > 0) {
-    return data;
-  } else {
-    return response;
-  }
-};
-
 app.delete("/api/cart", async (req, res) => {
   const { id } = req.query;
   const data = await remove(id);
@@ -138,12 +84,9 @@ app.delete("/api/cart", async (req, res) => {
 
 // CLEAR CART
 app.delete("/api/clear-cart", async (req, res) => {
-  console.log("here");
   let { cart } = req.query;
-  const data = await database
-    .get("cart")
-    .remove(cart)
-    .write();
+  const data = await clearCart(cart);
+
   res.send(data);
 });
 

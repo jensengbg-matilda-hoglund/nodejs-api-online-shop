@@ -13,8 +13,7 @@ const addItem = async id => {
 
 // find ID to add
 const findID = e => {
-  const target = e.target;
-  const id = target.id;
+  const id = e.target.id;
   addItem(id);
 };
 

@@ -3,9 +3,8 @@ const getProducts = async () => {
   let response = await fetch(url, {
     method: "GET"
   });
-  let data = await response.json();
-  let products = await data;
-  return products;
-}
+  let productsArray = await response.json();
+  return productsArray;
+};
 
 export default getProducts;

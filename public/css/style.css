@@ -292,6 +292,10 @@ h3 {
   align-self: center;
 }
 
+.mobile-checkout {
+  display: none;
+}
+
 #checkout-btn {
   font-size: 1.5em;
   color: #00ffff;
@@ -304,4 +308,89 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+}
+
+@media only screen and (max-width: 400px) {
+  html {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .left-bar {
+    display: none;
+  }
+
+  .slogan {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    grid-column: 1/2;
+    margin: 1em;
+    justify-content: center;
+  }
+
+  .nav {
+    height: 10em;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .menu {
+    width: auto;
+    margin: 2em;
+    justify-content: space-between;
+  }
+
+  .cart {
+    width: 90%;
+    margin: 0;
+  }
+
+  .cart-item {
+    font-size: 0.8em;
+    grid-template-columns: 15em 7em 3em;
+  }
+
+  .cart-divider {
+    align-self: center;
+    margin: 0;
+  }
+
+  .sum-cart {
+    font-size: 0.8em;
+    justify-content: space-between;
+    margin: 1em 0 3em 0;
+  }
+
+  .checkout {
+    display: none;
+  }
+
+  .mobile-checkout {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+  }
 }

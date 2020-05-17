@@ -1,5 +1,5 @@
-const database = require("./database.js");
-const app = require("./app");
+const database = require("./database-op.js");
+const app = require("./endpoints.js");
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
