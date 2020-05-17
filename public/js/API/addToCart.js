@@ -6,7 +6,7 @@ const addItem = async id => {
   });
   const button = document.getElementById(id);
   button.innerHTML = "in cart";
-  button.disable = true;
+  button.style.cursor = "";
 
 
 };

@@ -55,5 +55,24 @@
       "imgurl": "../img/tips.png"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "b5655160-7b97-4967-8daf-15d7622e7178",
+      "name": "Coffee",
+      "price": "1.40",
+      "imgurl": "../img/coffee.png"
+    },
+    {
+      "id": "33f282b8-50ed-4a55-a858-cfd9a5e7304e",
+      "name": "Banana",
+      "price": "1.20",
+      "imgurl": "../img/banana.png"
+    },
+    {
+      "id": "90df866d-51a4-43f2-b610-2b3f62176e44",
+      "name": "Fruit Salad",
+      "price": "0.80",
+      "imgurl": "../img/fruit-salad.png"
+    }
+  ]
 }
